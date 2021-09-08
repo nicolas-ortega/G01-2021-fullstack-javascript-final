@@ -1,13 +1,15 @@
 /frontend/node_modules
 /backend/node_modules
+
 firebase-service-account.json
+local.database.sqlite3
+
 .DS_Store
 ../node_modules
 /dist
 
 /tests/e2e/videos/
 /tests/e2e/screenshots/
-
 
 # local env files
 .env.local
