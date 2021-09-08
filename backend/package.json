@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "sequelize": "sequelize",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "test": "jest --runInBand --coverage",
+    "jest": "jest"
   },
   "keywords": [],
   "author": "",
@@ -18,8 +19,11 @@
     "sequelize": "^6.6.5"
   },
   "devDependencies": {
+    "jest": "^27.1.0",
+    "jest-cli": "^27.1.0",
     "nodemon": "^2.0.12",
     "sequelize-cli": "^6.2.0",
-    "sqlite3": "^5.0.2"
+    "sqlite3": "^5.0.2",
+    "supertest": "^6.1.6"
   }
 }

@@ -4,14 +4,16 @@
     "password": null,
     "database": "database_development",
     "host": "local.database.sqlite3",
-    "dialect": "sqlite"
+    "dialect": "sqlite",
+    "logging": false
   },
   "test": {
     "username": "root",
     "password": null,
     "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "host": "test.database.sqlite3",
+    "dialect": "sqlite",
+    "logging": false
   },
   "production": {
     "username": "root",

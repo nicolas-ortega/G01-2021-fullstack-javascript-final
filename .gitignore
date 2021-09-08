@@ -1,8 +1,11 @@
 /frontend/node_modules
 /backend/node_modules
+/backend/coverage
 
 firebase-service-account.json
 local.database.sqlite3
+test.database.sqlite3
+
 
 .DS_Store
 ../node_modules
