@@ -10,14 +10,14 @@
 //
 //
 // -- This is a parent command --
-Cypress.Commands.add("login", (email, password) => {
+Cypress.Commands.add('login', (email, password) => {
   cy.visit('/')
   cy.get('[data-cy=username]').type(email)
   cy.get('[data-cy=password]').type(password)
   cy.get('[data-cy=login-btn]').click()
-});
+})
 
-Cypress.Commands.add("toLocation", (path) => {
+Cypress.Commands.add('toLocation', (path) => {
   cy.location('pathname').should('equal', path)
 })
 // -- This is a child command --
