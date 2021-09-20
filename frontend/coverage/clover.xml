@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1631160405549" clover="3.2.0">
-  <project timestamp="1631160405549" name="All files">
+<coverage generated="1632179508489" clover="3.2.0">
+  <project timestamp="1632179508489" name="All files">
     <metrics statements="42" coveredstatements="40" conditionals="10" coveredconditionals="9" methods="14" coveredmethods="13" elements="66" coveredelements="62" complexity="0" loc="42" ncloc="42" packages="5" files="6" classes="6"/>
     <package name="src">
       <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -59,17 +59,17 @@
       <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
       <file name="Login.vue" path="/mnt/d/Proyectos/boolean_app/frontend/src/views/Login.vue">
         <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="5"/>
-        <line num="42" count="2" type="stmt"/>
-        <line num="43" count="2" type="stmt"/>
-        <line num="47" count="9" type="stmt"/>
-        <line num="49" count="24" type="cond" truecount="2" falsecount="0"/>
-        <line num="54" count="12" type="cond" truecount="2" falsecount="0"/>
-        <line num="61" count="3" type="stmt"/>
-        <line num="64" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="65" count="2" type="stmt"/>
-        <line num="66" count="2" type="stmt"/>
-        <line num="67" count="1" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="44" count="9" type="stmt"/>
+        <line num="46" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="51" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="58" count="3" type="stmt"/>
+        <line num="61" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
       </file>
       <file name="Products.vue" path="/mnt/d/Proyectos/boolean_app/frontend/src/views/Products.vue">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/server.js",
-    "sequelize": "sequelize",
-    "start": "node src/server.js",
+    "start": "nodemon src/server.js",
     "test": "jest --runInBand --coverage",
-    "jest": "jest"
+    "lint": "eslint .",
+    "eslint": "eslint",
+    "jest": "jest",
+    "sequelize": "sequelize"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,8 @@
     "sequelize": "^6.6.5"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-jest": "^24.4.2",
     "jest": "^27.1.0",
     "jest-cli": "^27.1.0",
     "nodemon": "^2.0.12",

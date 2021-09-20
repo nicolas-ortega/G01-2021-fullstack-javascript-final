@@ -1,0 +1,30 @@
+{
+  "name": "boolean_app",
+  "version": "1.0.0",
+  "description": "Proyecto de finalización de la Generación 01 del curso Fullstack Javascript",
+  "main": "index.js",
+  "scripts": {
+    "frontend-test:unit": "cd frontend && npm run test:unit",
+    "frontend-lint": "cd frontend && npm run lint",
+    "backend-lint": "cd backend && npm run lint",
+    "backend-test": "cd backend && npm test",
+    "pre-commit": "npm-run-all frontend-lint backend-lint",
+    "pre-push": "npm-run-all frontend-test:unit backend-test",
+    "husky": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolas-ortega/G01-2021-fullstack-javascript-final.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolas-ortega/G01-2021-fullstack-javascript-final/issues"
+  },
+  "homepage": "https://github.com/nicolas-ortega/G01-2021-fullstack-javascript-final#readme",
+  "dependencies": {
+    "husky": "^7.0.2",
+    "npm-run-all": "^4.1.5"
+  }
+}

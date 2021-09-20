@@ -12,14 +12,14 @@ jest.mock('axios', () => ({
   get: jest.fn()
 }))
 
-/*jest.mock('@/firebase', () => ({
+/* jest.mock('@/firebase', () => ({
   Auth: {
     currentUser: {
       name: 'dummyUser',
       getIdToken: () => 'fakeToken'
     }
   }
-}))*/
+})) */
 
 jest.mock('@/firebase', () => ({
   firebaseApp: {

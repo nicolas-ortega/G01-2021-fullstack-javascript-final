@@ -7,11 +7,11 @@ import store from '@/store'
 import router from '@/router'
 import { firebaseApp } from '@/firebase'
 
-/*jest.mock('@/firebase', () => ({
+/* jest.mock('@/firebase', () => ({
   Auth: {
     signInWithEmailAndPassword: jest.fn()
   }
-}))*/
+})) */
 jest.mock('@/firebase', () => ({
   firebaseApp: {
     auth: jest.fn().mockReturnValue({
