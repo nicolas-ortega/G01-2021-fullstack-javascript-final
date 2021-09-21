@@ -35,9 +35,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     env:
-      HEROKU_APP_NAME: $
-      HEROKU_OWNER_EMAIL: $
-      HEROKU_API_KEY: $
+      HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+      HEROKU_OWNER_EMAIL: ${{ secrets.HEROKU_OWNER_EMAIL }}
+      HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
     steps:
       - name: Download production artifact
         uses: actions/download-artifact@v2
