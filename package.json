@@ -10,7 +10,8 @@
     "backend-test": "cd backend && npm test",
     "pre-commit": "npm-run-all frontend-lint backend-lint",
     "pre-push": "npm-run-all frontend-test:unit backend-test",
-    "husky": "husky"
+    "husky": "husky",
+    "heroku": "heroku"
   },
   "repository": {
     "type": "git",
