@@ -1,6 +1,9 @@
 /frontend/node_modules
 /backend/node_modules
 /backend/coverage
+/backend/src/public
+/backend/public
+node_modules
 
 firebase-service-account.json
 local.database.sqlite3
