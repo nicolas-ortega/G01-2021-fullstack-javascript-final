@@ -24,5 +24,21 @@ module.exports = {
 				.status(statusCode)
 				.json({ message })
 		}
+	},
+	async createProducts(request, response){
+		try{
+			const {body} = request
+			const products = await Product.create(body)
+			return response
+				.status(201)
+				.json(products)
+		}catch (error) {
+			const { message } = error
+			console.error(`POST with status code 500 in /api/products endpoint. Error: ${message}`)
+			return response
+				.status(500)
+				.json({ message })
+		}
 	}
+
 }

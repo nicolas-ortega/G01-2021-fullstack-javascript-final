@@ -7,7 +7,7 @@ describe('login tests suite', () => {
   })
 
   it('does work with valid credentials', () => {
-    cy.login('tests-e2e@boolean.cl', 'booleanacademia')
+    cy.login('test-e2e@boolean.cl', 'booleanacademia')
     cy.toLocation('/productos')
   })
 })

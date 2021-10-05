@@ -13,6 +13,9 @@ export default new Vuex.Store({
     SET_PRODUCTS (store, products) {
       store.products = products
     },
+    CREATE_PRODUCTS (store, products) {
+      store.products = products
+    },
     SET_ALERT (store, alert) {
       store.alert = alert
     }
@@ -23,6 +26,16 @@ export default new Vuex.Store({
       try {
         const products = await productService.getProducts()
         commit('SET_PRODUCTS', products)
+      } catch (error) {
+        commit('SET_ALERT', { message: error.message, type: 'error' })
+      }
+    },
+    async createProduct (actionContext, data) {
+      const { commit } = actionContext
+      try {
+        const products = await productService.createProduct(data)
+        commit('CREATE_PRODUCTS', products)
+        commit('SET_ALERT', { message: 'Producto ingresado correctamente', type: 'success' })
       } catch (error) {
         commit('SET_ALERT', { message: error.message, type: 'error' })
       }

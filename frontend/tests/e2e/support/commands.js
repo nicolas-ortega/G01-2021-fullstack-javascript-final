@@ -20,6 +20,16 @@ Cypress.Commands.add('login', (email, password) => {
 Cypress.Commands.add('toLocation', (path) => {
   cy.location('pathname').should('equal', path)
 })
+
+Cypress.Commands.add('createProduct', (product) => {
+  const { name, code, description, image } = product
+  cy.get('[data-cy=name]').type(name)
+  cy.get('[data-cy=code]').type(code)
+  cy.get('[data-cy=description]').type(description)
+  cy.get('[data-cy=image]').type(image)
+  cy.get('[data-cy=create-btn]').click()
+})
+
 // -- This is a child command --
 // Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
 //

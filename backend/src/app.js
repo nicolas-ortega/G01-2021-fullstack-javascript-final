@@ -5,6 +5,7 @@ const staticFolder = `${__dirname}/public`
 const app = express()
 
 app.use(express.static(staticFolder))
+app.use(express.json())
 app.use('/api', authMiddleware)
 app.use('/api', routes)
 

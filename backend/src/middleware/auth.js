@@ -8,7 +8,9 @@ module.exports = async (request, response, next) => {
 		return response.status(401).json({ message: 'No token provided' })
 	}
 
-	const [authorizationType, tokenValue] = headerToken.split(' ')
+	const [authorizationType, tokenValue] = headerToken.split(' ');
+
+	console.log({headerToken});
 
 	if (headerToken && authorizationType.toLowerCase() !== 'bearer') {
 		return response.status(401).json({ message: 'Invalid token' })

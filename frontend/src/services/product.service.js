@@ -15,5 +15,17 @@ export default {
     } catch (error) {
       throw new Error('Productos momentáneamente no disponibles')
     }
+  },
+  async createProduct (data) {
+    try {
+      const token = await firebaseApp.auth().currentUser?.getIdToken(true)
+      const headers = {
+        Authorization: `Bearer ${token}`
+      }
+      const response = await axios.post(productsURL, data, { headers: headers })
+      return response.data
+    } catch (error) {
+      throw new Error('Error al agregar nuevo producto')
+    }
   }
 }
