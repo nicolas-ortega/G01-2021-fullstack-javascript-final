@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../views/Login.vue'
 import Products from '../views/Products.vue'
-import Create from '../views/CreateProduct'
+import Create from '../views/CreateProduct.vue'
 import { firebaseApp } from '@/firebase'
 
 Vue.use(VueRouter)
@@ -39,8 +39,9 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   firebaseApp.auth().onAuthStateChanged(user => {
     const authRequired = to.matched.some(route => route.meta.login)
+
     if (!user && authRequired) {
-      next('/')
+      next('/login')
     } else {
       next()
     }

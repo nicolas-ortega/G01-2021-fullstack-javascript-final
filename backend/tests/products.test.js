@@ -29,6 +29,32 @@ describe('/api/products', () =>{
 		expect(response.body).toMatchObject(productsFixture)
 	})
 
+	it('add a new product', async () => {
+		const totalProduct = await Models.Product.count();
+		const newProduct = {
+			name: 'Supertest product',
+			code: '000',
+			description: 'Producto agregado con prueba usando supertest',
+			image: 'a',
+		}
+		const response = await supertest(app)
+			.post('/api/products')
+			.set('Authorization', 'Bearer valid-token')
+			.send(newProduct)
+			.expect(201)
+
+		const product = await Models.Product.findOne({
+			where:{
+				id: response.body.id
+			},
+			raw: true
+		})
+		const newTotal = await Models.Product.count();
+
+		expect(response.body.id).toEqual(product.id)
+		expect(newTotal).toBeGreaterThan(totalProduct)
+	})
+
 	it('returns 500 when the database throws error', async () => {
 		await Models.Product.drop()
 
